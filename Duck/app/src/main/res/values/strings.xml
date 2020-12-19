@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Duck</string>
+    <string name="duck">Its a duck!</string>
+    <string name="overlap">not a real one</string>
 </resources>
