@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RelativeLayout</string>
+    <string name="click_me">CLICK ME</string>
+    <string name="new_button">NEW BUTTON</string>
 </resources>
