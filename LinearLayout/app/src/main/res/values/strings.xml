@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">LinearLayout</string>
+    <string name="text_view1">This is a text view</string>
+    <string name="click_me">CLICK ME</string>
+    <string name="button_below">Below</string>
+    <string name="to">To</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
 </resources>
