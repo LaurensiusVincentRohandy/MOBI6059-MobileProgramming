@@ -13,7 +13,7 @@
         <activity android:name=".MyOrderActivity" />
         <activity android:name=".OrderActivity" />
         <activity android:name=".TopUpActivity" />
-        <activity android:name=".FoodActivity" />
+        <activity android:name=".FoodsActivity" />
         <activity android:name=".SnacksActivity" />
         <activity android:name=".DrinksActivity" />
         <activity android:name=".MainActivity">

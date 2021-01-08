@@ -8,45 +8,45 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-public class SnacksActivity extends AppCompatActivity {
-    ArrayList<Snacks> snacksList = new ArrayList<>();
-    Snacks snacks;
+public class FoodsActivity extends AppCompatActivity {
+    ArrayList<Foods> foodsList = new ArrayList<>();
+    Foods foods;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_snacks);
+        setContentView(R.layout.activity_food);
     }
 
-    public void onClickBuyChips(View view) {
+    public void onClickBuyNasi(View view) {
         Intent intent = new Intent(this, OrderActivity.class);
-        snacks.setName("Chips");
-        snacks.setPrice(15000);
-        snacksList.add(snacks);
+        foods.setName("Nasi Goreng");
+        foods.setPrice(15000);
+        foodsList.add(foods);
         startActivity(intent);
     }
 
-    public void onClickBuyBeng(View view) {
+    public void onClickBuyMie(View view) {
         Intent intent = new Intent(this, OrderActivity.class);
-        snacks.setName("Beng-beng");
-        snacks.setPrice(2000);
-        snacksList.add(snacks);
+        foods.setName("Mie Goreng");
+        foods.setPrice(20000);
+        foodsList.add(foods);
         startActivity(intent);
     }
 
-    public void onClickBuyOreo(View view) {
+    public void onClickBuyKwetiau(View view) {
         Intent intent = new Intent(this, OrderActivity.class);
-        snacks.setName("Oreo");
-        snacks.setPrice(10000);
-        snacksList.add(snacks);
+        foods.setName("Kwetiau Goreng");
+        foods.setPrice(25000);
+        foodsList.add(foods);
         startActivity(intent);
     }
 
-    public void onClickBuyMomogi(View view) {
+    public void onClickBuyBihun(View view) {
         Intent intent = new Intent(this, OrderActivity.class);
-        snacks.setName("Momogi");
-        snacks.setPrice(5000);
-        snacksList.add(snacks);
+        foods.setName("Bihun Goreng");
+        foods.setPrice(10000);
+        foodsList.add(foods);
         startActivity(intent);
     }
 
