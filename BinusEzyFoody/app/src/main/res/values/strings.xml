@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Binus EzyFoody</string>
+    <string name="drinksButton">Drinks</string>
+    <string name="snacksButton">Snacks</string>
+    <string name="foodsButton">Foods</string>
+    <string name="topUpButton">TopUp</string>
+    <string name="buy">Buy</string>
+    <string name="myOrder">My Order</string>
+    <string name="orderMore">Order More</string>
+    <string name="delete">Hapus</string>
+    <string name="payNow">Pay Now</string>
+    <string name="main">Menu Utama</string>
+    <string name="qty">Quantity: </string>
+    <string name="error">Sorry, this page is not available yet :(</string>
+    <string name="back">Back</string>
+</resources>
