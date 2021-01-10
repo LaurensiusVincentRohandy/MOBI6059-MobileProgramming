@@ -13,4 +13,5 @@
     <string name="qty">Quantity: </string>
     <string name="error">Sorry, this page is not available yet :(</string>
     <string name="back">Back</string>
+    <string name="yourBalance">Your Balance: </string>
 </resources>
