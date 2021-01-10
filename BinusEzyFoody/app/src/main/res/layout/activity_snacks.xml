@@ -1,31 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
+    android:columnCount="2"
     tools:context=".SnacksActivity">
 
+    //MyOrder
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_gravity="right"
+        android:onClick="onClickMyOrder"
+        android:text="@string/myOrder"/>
+
+    //Chips
+    <ImageView
+        android:layout_width="165dp"
+        android:layout_height="185dp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/gbr_chips" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/error"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_marginStart="40dp"
+        android:text="Chips\n Rp25.000"
+        android:textAlignment="center"
+        android:textSize="20sp" />
     <Button
-        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClickBackButton"
-        android:text="@string/back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.56" />
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_marginStart="40dp"
+        android:onClick="onClickBuyChips"
+        android:text="@string/buy" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    //Beng-beng
+    <ImageView
+        android:layout_width="165dp"
+        android:layout_height="185dp"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:layout_gravity="end"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/gbr_beng" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:layout_gravity="end"
+        android:layout_marginEnd="30dp"
+        android:text="Beng-beng\n Rp2.000"
+        android:textSize="20sp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_gravity="end"
+        android:layout_marginEnd="40dp"
+        android:onClick="onClickBuyBeng"
+        android:text="@string/buy" />
+
+    //Oreo
+    <ImageView
+        android:layout_width="165dp"
+        android:layout_height="185dp"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/gbr_oreo" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:layout_marginStart="45dp"
+        android:text="Oreo\n Rp9.000"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="6"
+        android:layout_column="0"
+        android:layout_marginStart="45dp"
+        android:onClick="onClickBuyOreo"
+        android:text="@string/buy" />
+
+    //Momogi
+    <ImageView
+        android:layout_width="165dp"
+        android:layout_height="185dp"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:layout_gravity="end"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/gbr_momogi" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:layout_gravity="end"
+        android:layout_marginEnd="45dp"
+        android:text="Momogi\n Rp7.000"
+        android:textSize="20sp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="6"
+        android:layout_column="1"
+        android:layout_gravity="end"
+        android:layout_marginEnd="40dp"
+        android:onClick="onClickBuyMomogi"
+        android:text="@string/buy" />
+</GridLayout>

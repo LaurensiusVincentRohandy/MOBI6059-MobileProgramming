@@ -13,8 +13,37 @@ public class SnacksActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_snacks);
     }
-    public void onClickBackButton(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+
+    public void onClickBuyChips(View view) {
+        Intent intent = new Intent(this, OrderActivity.class);
+        String order = "Chips\n Rp25.000";
+        intent.putExtra(OrderActivity.EXTRA_MESSAGE, order);
+        startActivity(intent);
+    }
+
+    public void onClickBuyBeng(View view) {
+        Intent intent = new Intent(this, OrderActivity.class);
+        String order = "Beng-beng\n Rp2.000";
+        intent.putExtra(OrderActivity.EXTRA_MESSAGE, order);
+        startActivity(intent);
+    }
+
+    public void onClickBuyOreo(View view) {
+        Intent intent = new Intent(this, OrderActivity.class);
+        String order = "Oreo\n Rp9.000";
+        intent.putExtra(OrderActivity.EXTRA_MESSAGE, order);
+        startActivity(intent);
+    }
+
+    public void onClickBuyMomogi(View view) {
+        Intent intent = new Intent(this, OrderActivity.class);
+        String order = "Momogi\n Rp7.000";
+        intent.putExtra(OrderActivity.EXTRA_MESSAGE, order);
+        startActivity(intent);
+    }
+
+    public void onClickMyOrder(View view) {
+        Intent intent = new Intent(this, MyOrderActivity.class);
         startActivity(intent);
     }
 }
