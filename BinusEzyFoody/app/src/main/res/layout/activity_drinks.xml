@@ -32,13 +32,14 @@
         android:layout_column="0"
         android:layout_marginStart="25dp"
         android:text="Air Mineral\n Rp2.000"
+        android:textAlignment="center"
         android:textSize="20sp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_row="3"
         android:layout_column="0"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="30dp"
         android:onClick="onClickBuyWater"
         android:text="@string/buy" />
 
@@ -85,13 +86,14 @@
         android:layout_column="0"
         android:layout_marginStart="20dp"
         android:text="Jus Mangga\n Rp6.000"
+        android:textAlignment="center"
         android:textSize="20sp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_row="6"
         android:layout_column="0"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="35dp"
         android:onClick="onClickBuyMango"
         android:text="@string/buy" />
 

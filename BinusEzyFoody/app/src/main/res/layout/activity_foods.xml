@@ -30,8 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_row="2"
         android:layout_column="0"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="35dp"
         android:text="Nasi Goreng\n Rp15.000"
+        android:textAlignment="center"
         android:textSize="20sp" />
     <Button
         android:layout_width="wrap_content"
@@ -83,8 +84,9 @@
         android:layout_height="wrap_content"
         android:layout_row="5"
         android:layout_column="0"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="20dp"
         android:text="Kwetiau Goreng\n Rp20.000"
+        android:textAlignment="center"
         android:textSize="20sp" />
     <Button
         android:layout_width="wrap_content"
