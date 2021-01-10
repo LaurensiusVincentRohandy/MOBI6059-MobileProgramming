@@ -18,4 +18,5 @@
     <string name="topUpHint">Input Amount</string>
     <string name="homeBtn">Home</string>
     <string name="qtyHint">Input quantity</string>
+    <string name="totalPrice">Total: Rp. </string>
 </resources>

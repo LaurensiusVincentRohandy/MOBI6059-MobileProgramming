@@ -1,36 +1,47 @@
 package com.example.binusezyfoody;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cursoradapter.widget.SimpleCursorAdapter;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class OrderCompleteActivity extends AppCompatActivity {
-    ArrayList<Drinks> drinksList = new ArrayList<>();
-    Drinks drinks;
-    String name;
-    int price;
-    int totalPrice = 0;
+    private SQLiteDatabase db;
+    private Cursor cursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_complete);
-        TextView display = (TextView) findViewById(R.id.checkOut);
-        Intent intent = getIntent();
-        for(Drinks drink : drinksList) {
-            name = drink.getName();
-            price = drink.getQty() * drink.getPrice();
-            totalPrice += price;
-            display.setText(name);
-            display.setText(price);
+
+        SQLiteOpenHelper databaseHelper = new DatabaseHelper(this);
+        try {
+            db = databaseHelper.getReadableDatabase();
+            cursor = db.query("PESANAN",
+                    new String[] {"_id", "NAME", "PRICE", "QUANTITY"},
+                    null , null, null, null, null);
+
+            SimpleCursorAdapter listAdapter = new SimpleCursorAdapter(this,
+                    android.R.layout.simple_list_item_1,
+                    cursor,
+                    new String[] {"NAME", "PRICE", "QUANTITY"},
+                    new int[] {android.R.id.text1},
+                    0);
+        } catch (SQLException e) {
+            Toast toast = Toast.makeText(this, "Database Unavailable", Toast.LENGTH_LONG);
+            toast.show();
         }
-        display.setText(totalPrice);
     }
 
     public void onClickMainMenu(View view) {
