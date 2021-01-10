@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class OrderActivity extends AppCompatActivity {
+    public static final String EXTRA_MESSAGE = "message";
     ArrayList<Drinks> drinksList = new ArrayList<>();
     Drinks drinks;
     String name;
@@ -20,14 +21,10 @@ public class OrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
-        TextView display = (TextView) findViewById(R.id.order);
         Intent intent = getIntent();
-        for(Drinks drink : drinksList) {
-            name = drink.getName();
-            price = drink.getPrice();
-            display.setText(name);
-            display.setText(price);
-        }
+        String order = intent.getStringExtra(EXTRA_MESSAGE);
+        TextView display = (TextView) findViewById(R.id.order);
+        display.setText(order);
     }
 
     public void onClickMyOrder(View view) {

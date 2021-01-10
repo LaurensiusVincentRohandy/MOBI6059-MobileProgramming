@@ -2,7 +2,7 @@ package com.example.binusezyfoody;
 
 public class Drinks {
     String name;
-    int price, qty;
+    int price, qty, stock;
 
     public String getName() {
         return name;
@@ -26,5 +26,13 @@ public class Drinks {
 
     public void setQty(int qty) {
         this.qty = qty;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 }
