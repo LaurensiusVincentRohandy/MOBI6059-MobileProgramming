@@ -1,13 +1,14 @@
 package com.example.binusezyfoody;
 
 public class TopUp {
-    String balance = "20000";
+    int balance;
 
-    public String getBalance() {
+    public int getBalance() {
         return balance;
     }
 
-    public void setBalance(String balance) {
-        this.balance = balance;
+    public int setBalance(int balance) {
+        this.balance += balance;
+        return balance;
     }
 }

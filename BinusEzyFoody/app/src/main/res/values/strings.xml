@@ -14,4 +14,7 @@
     <string name="error">Sorry, this page is not available yet :(</string>
     <string name="back">Back</string>
     <string name="yourBalance">Your Balance: </string>
+    <string name="topUpBalance">Top Up Balance: </string>
+    <string name="topUpHint">Input Amount</string>
+    <string name="homeBtn">Home</string>
 </resources>
