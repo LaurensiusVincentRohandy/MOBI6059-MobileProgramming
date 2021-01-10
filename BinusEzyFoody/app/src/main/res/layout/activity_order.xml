@@ -1,55 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
+    android:columnCount="2"
     tools:context=".OrderActivity">
+
+    //MyOrder
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_gravity="right"
+        android:onClick="onClickMyOrder"
+        android:text="@string/myOrder"/>
 
     <TextView
         android:id="@+id/order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:textSize="20sp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="176dp"
-        android:layout_marginTop="176dp"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
         android:text="@string/qty"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/qty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="260dp"
-        android:layout_marginTop="160dp"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
         android:inputType="number"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="@string/qtyHint"
+        android:textSize="20sp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="248dp"
-        android:layout_marginTop="52dp"
-        android:onClick="onClickMyOrder"
-        android:text="@string/myOrder"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="228dp"
-        android:layout_marginTop="332dp"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
         android:onClick="onClickOrderMore"
-        android:text="@string/orderMore"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="@string/orderMore" />
+</GridLayout>
